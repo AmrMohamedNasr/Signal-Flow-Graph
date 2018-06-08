@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Image;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -68,7 +69,7 @@ public class ButtonPanel extends JPanel {
 		this.setBorder(BorderFactory.createEtchedBorder());
 		Dimension d = new Dimension(BUTTON_SIZE, BUTTON_SIZE);
 		for (int i = 0; i < ICONS.length; i++) {
-			ImageIcon icon = new ImageIcon(".\\Icons\\"
+			ImageIcon icon = new ImageIcon("." + File.separator + "Icons" + File.separator
 					+ ICONS[i]);
 			icon = resizeIcon(icon);
 			JButton temp = new JButton(icon);
